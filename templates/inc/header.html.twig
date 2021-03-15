@@ -1,0 +1,23 @@
+
+<header>
+    <div class="container">
+                    <img href="/" src="https://txt.1001fonts.net/img/txt/dHRmLjQ0LmU0NTQyMS5jR0YwYUEsLC4w/rolling-beat-personal-use.regular.png" class="logo" alt="Short Url Logo" />
+                    <div class="auth-buttons" style="float:right">
+                        <a class="button button-primary" href="/">Home</a>
+                        <a  class="button button-bordered" href="/features">Features</a>
+                        <a  class="button button-primary" href="/contact">Contact</a>
+                        <a  class="button button-bordered" href="/about">About</a>
+                        {% if app.user %}
+                            <a href="{{ path('app_logout') }}" class="button button-primary">Logout</a>
+                            <a href="/profile" class="pl-5 button button-bordered">Profile</a>
+                        {% else %}
+                            <a href="/login" class="pl-5 button button-primary">Login</a>
+                            <a href="/signup" class="button button-bordered">Signup</a>
+                        {% endif %}
+                    </div>
+    </div>
+
+
+
+
+</header>

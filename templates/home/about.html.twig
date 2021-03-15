@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+
+{% block header %}
+    {% include 'inc/header.html.twig' %}
+{% endblock %}
+
+{% block body %}
+<div class="aboutpage">
+</div>
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+    {% block footer %}
+        {% include 'inc/footer.html.twig' %}
+    {% endblock %}
